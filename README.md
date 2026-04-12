@@ -6,7 +6,7 @@ This project builds a machine learning system to predict customer churn using te
 
 Identify customers who are likely to leave so companies can take proactive retention actions.
 
-The project focuses on building a clean end-to-end ML workflow, from data exploration to preprocessing and modeling.
+The project focuses on building a clean end-to-end ML workflow, from data exploration to preprocessing and modelling.
 
 # 🧰 Tech stack
 Python
