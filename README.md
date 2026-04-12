@@ -9,12 +9,12 @@ Identify customers who are likely to leave so companies can take proactive reten
 The project focuses on building a clean end-to-end ML workflow, from data exploration to preprocessing and modelling.
 
 # 🧰 Tech stack
-Python
-pandas
-scikit-learn
-XGBoost (planned)
-Streamlit (planned)
-SHAP (for model explainability)
+- Python
+- pandas
+- scikit-learn
+- XGBoost (planned)
+- Streamlit (planned)
+- SHAP (for model explainability)
 
 # 📊 Dataset
 
