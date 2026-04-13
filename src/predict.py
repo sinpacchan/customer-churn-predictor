@@ -4,7 +4,6 @@ import pandas as pd
 # Load model once
 model = joblib.load("models/best_model.pkl")
 
-
 def predict_churn(input_data):
     """
     Predict churn probability for new customer data.
@@ -30,7 +29,6 @@ def predict_churn(input_data):
     proba = model.predict_proba(input_data)[:, 1]
 
     return proba
-
 
 # 🔥 Example usage
 if __name__ == "__main__":
