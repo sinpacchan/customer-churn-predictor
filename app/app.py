@@ -89,3 +89,55 @@ if submit:
         st.error("⚠️ High risk of churn")
     else:
         st.success("✅ Low risk of churn")
+
+st.header("📊 Customer Risk Dashboard")
+
+uploaded_file_bulk = st.file_uploader(
+    "Upload customer dataset for risk analysis",
+    type=["csv"],
+    key="bulk"
+)
+
+if uploaded_file_bulk:
+    df_bulk = pd.read_csv(uploaded_file_bulk)
+
+    st.write("Preview:")
+    st.dataframe(df_bulk.head())
+
+    # Ensure correct columns
+    df_bulk = df_bulk[model.feature_names_in_]
+
+    # Predict probabilities
+    probs = model.predict_proba(df_bulk)[:, 1]
+    df_bulk["churn_probability"] = probs
+
+    # Risk levels
+    def risk_level(p):
+        if p < 0.3:
+            return "Low"
+        elif p < 0.6:
+            return "Medium"
+        else:
+            return "High"
+
+    df_bulk["risk_level"] = df_bulk["churn_probability"].apply(risk_level)
+
+    # Color styling
+    def color_risk(val):
+        if val == "High":
+            return "background-color: #ff4d4d"
+        elif val == "Medium":
+            return "background-color: #ffd966"
+        else:
+            return "background-color: #66ff66"
+
+    st.subheader("📋 Customer Risk Table")
+
+    styled_df = df_bulk.style.applymap(color_risk, subset=["risk_level"])
+    st.dataframe(styled_df)
+
+    # High risk customers
+    st.subheader("🔥 High Risk Customers")
+
+    high_risk = df_bulk[df_bulk["risk_level"] == "High"]
+    st.dataframe(high_risk.sort_values(by="churn_probability", ascending=False))
