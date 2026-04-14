@@ -2,6 +2,9 @@
 
 This project builds an end-to-end machine learning system to predict customer churn using telecom customer data.
 
+👉 **Live App:**  
+https://sinpacchan-customer-churn-predictor-appapp-kdc8wb.streamlit.app/
+
 ---
 
 # 🎯 Goal
@@ -111,10 +114,12 @@ Telco Customer Churn dataset (Kaggle)
 
 ---
 
-# 🚀 How to Run
+# 🚀 How to Run Locally
 
-### 1. Install dependencies
-### 2. Run Streamlit app (streamlit run app/app.py)
+```bash
+pip install -r requirements.txt
+streamlit run app/app.py
+```
 
 ---
 
@@ -124,19 +129,28 @@ Telco Customer Churn dataset (Kaggle)
 - Handling real-world data issues
 - Model evaluation beyond accuracy
 - Interpreting models with SHAP
-- Turning ML models into interactive applications
+- Deploying ML systems as interactive apps
 
 ---
 
 # 🎯 Future Improvements
 
-- Deploy app online (Streamlit Cloud)
-- Add SHAP visualizations to dashboard
 - Improve feature engineering
 - Add API (FastAPI / Flask)
+- Add user authentication
+- Enhance UI/UX of dashboard
+- Real-time data integration
 
 ---
 
 # 📌 Summary
 
-This project demonstrates how to go from raw data to a **deployable, explainable machine learning application**, combining modeling, interpretation, and user-facing tools.
+This project demonstrates how to go from raw data to a deployed, explainable machine learning application.
+
+It combines:
+
+- predictive modeling
+- interpretability
+- and user-facing tools
+
+into one cohesive system designed for real-world impact.
