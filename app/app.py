@@ -179,7 +179,7 @@ if uploaded_file_bulk:
             return "background-color: #66ff66"
 
     st.subheader("📋 Customer Risk Table")
-    st.dataframe(df_bulk.style.applymap(color_risk, subset=["risk_level"]))
+    st.dataframe(df_bulk.style.map(color_risk, subset=["risk_level"]))
 
     # =========================
     # 🔥 HIGH RISK
