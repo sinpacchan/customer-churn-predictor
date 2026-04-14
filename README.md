@@ -99,14 +99,14 @@ Telco Customer Churn dataset (Kaggle)
 
 # 📁 Project Structure
 
-customer-churn-predictor/
-│
-├── app/ # Streamlit dashboard
-├── src/ # prediction logic
-├── models/ # trained models
-├── data/ # dataset
-├── notebooks/ # EDA, training, experiments
-└── README.md
+- customer-churn-predictor/
+- │
+- ├── app/ # Streamlit dashboard
+- ├── src/ # prediction logic
+- ├── models/ # trained models
+- ├── data/ # dataset
+- ├── notebooks/ # EDA, training, experiments
+- └── README.md
 
 
 ---
@@ -114,7 +114,7 @@ customer-churn-predictor/
 # 🚀 How to Run
 
 ### 1. Install dependencies
-### 2. Run Streamlit app
+### 2. Run Streamlit app (streamlit run app/app.py)
 
 ---
 
