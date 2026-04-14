@@ -24,7 +24,7 @@ explainer = shap.TreeExplainer(classifier)
 # 🧠 HERO SECTION
 # =========================
 
-st.title("📊 Customer Churn Intelligence")
+st.title("📊 Customer Churn Predictor")
 
 st.markdown("""
 ### 🧠 Predict • Understand • Act
